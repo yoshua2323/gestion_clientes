@@ -1,13 +1,14 @@
 import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { HttpClientModule } from '@angular/common/http';
+import { ListarClientesComponent } from './componentes/listar-clientes/listar-clientes.component';
 
 @Component({
   selector: 'app-root',
-  standalone: true,
-  imports: [RouterOutlet],
   templateUrl: './app.component.html',
-  styleUrl: './app.component.css'
+  styleUrls: ['./app.component.css'],
+  standalone: true,
+  imports: [HttpClientModule, ListarClientesComponent]  
 })
 export class AppComponent {
-  title = 'gestion-clientes';
+  title = 'mi-aplicacion-angular';
 }
